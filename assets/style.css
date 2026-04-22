@@ -1,0 +1,170 @@
+/* SubjectRisk — Bloomberg Terminal Theme */
+/* Black #0a0a0a · Gold #f0c040 · Courier New monospace */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+/* ── ROOT ─────────────────────────────────── */
+html, body, [class*="css"] {
+    background-color: #0a0a0a !important;
+    color: #eeeeee !important;
+    font-family: 'Courier New', 'Space Mono', monospace !important;
+}
+
+.stApp {
+    background-color: #0a0a0a !important;
+}
+
+/* ── SIDEBAR ──────────────────────────────── */
+section[data-testid="stSidebar"] {
+    background-color: #0f0f0f !important;
+    border-right: 1px solid #222 !important;
+}
+section[data-testid="stSidebar"] * {
+    color: #aaaaaa !important;
+    font-family: 'Courier New', monospace !important;
+}
+
+/* ── HEADER / TOPBAR ──────────────────────── */
+header[data-testid="stHeader"] {
+    background-color: #0a0a0a !important;
+    border-bottom: 1px solid #222 !important;
+}
+
+/* ── MAIN CONTENT ─────────────────────────── */
+.main .block-container {
+    padding: 1.5rem 2rem !important;
+    max-width: 1100px !important;
+}
+
+/* ── TYPOGRAPHY ───────────────────────────── */
+h1 { color: #f0c040 !important; font-size: 1.4rem !important; letter-spacing: 0.08em !important; font-weight: 700 !important; }
+h2 { color: #f0c040 !important; font-size: 1.1rem !important; letter-spacing: 0.06em !important; font-weight: 700 !important; }
+h3 { color: #cccccc !important; font-size: 0.95rem !important; letter-spacing: 0.04em !important; }
+p, li, span { color: #aaaaaa !important; font-size: 0.88rem !important; line-height: 1.7 !important; }
+strong { color: #eeeeee !important; }
+code { color: #f0c040 !important; background: #1a1a1a !important; }
+
+/* ── METRIC CARDS ─────────────────────────── */
+[data-testid="metric-container"] {
+    background: #181818 !important;
+    border: 1px solid #2a2a2a !important;
+    border-radius: 3px !important;
+    padding: 1rem !important;
+}
+[data-testid="metric-container"] [data-testid="stMetricValue"] {
+    color: #f0c040 !important;
+    font-size: 1.6rem !important;
+    font-weight: 700 !important;
+}
+[data-testid="metric-container"] [data-testid="stMetricLabel"] {
+    color: #666 !important;
+    font-size: 0.7rem !important;
+    letter-spacing: 0.1em !important;
+    text-transform: uppercase !important;
+}
+[data-testid="metric-container"] [data-testid="stMetricDelta"] {
+    font-size: 0.75rem !important;
+}
+
+/* ── EXPANDERS ────────────────────────────── */
+[data-testid="stExpander"] {
+    background: #181818 !important;
+    border: 1px solid #2a2a2a !important;
+    border-radius: 3px !important;
+}
+[data-testid="stExpander"] summary {
+    color: #aaaaaa !important;
+    font-size: 0.85rem !important;
+}
+[data-testid="stExpander"] summary:hover {
+    color: #f0c040 !important;
+}
+
+/* ── SLIDERS ──────────────────────────────── */
+[data-testid="stSlider"] > div > div > div > div {
+    background: #f0c040 !important;
+}
+[data-testid="stSlider"] .stSlider > div:first-child {
+    background: #2a2a2a !important;
+}
+
+/* ── SELECT / INPUT ───────────────────────── */
+div[data-baseweb="select"] > div {
+    background-color: #181818 !important;
+    border-color: #2a2a2a !important;
+    color: #eeeeee !important;
+}
+div[data-baseweb="select"] span {
+    color: #eeeeee !important;
+}
+input[type="number"] {
+    background-color: #181818 !important;
+    border-color: #2a2a2a !important;
+    color: #eeeeee !important;
+}
+
+/* ── BUTTONS ──────────────────────────────── */
+.stButton > button {
+    background-color: #f0c040 !important;
+    color: #000000 !important;
+    border: none !important;
+    font-family: 'Courier New', monospace !important;
+    font-weight: 700 !important;
+    font-size: 0.85rem !important;
+    letter-spacing: 0.1em !important;
+    border-radius: 2px !important;
+    padding: 0.6rem 1.8rem !important;
+    transition: background 0.15s !important;
+}
+.stButton > button:hover {
+    background-color: #c89a28 !important;
+}
+
+/* ── RADIO / CHECKBOX ─────────────────────── */
+[data-testid="stRadio"] label, [data-testid="stCheckbox"] label {
+    color: #aaaaaa !important;
+    font-size: 0.85rem !important;
+}
+
+/* ── DIVIDERS ─────────────────────────────── */
+hr {
+    border-color: #222 !important;
+}
+
+/* ── TABS ─────────────────────────────────── */
+[data-testid="stTabs"] button {
+    color: #666 !important;
+    font-family: 'Courier New', monospace !important;
+    font-size: 0.8rem !important;
+    letter-spacing: 0.08em !important;
+}
+[data-testid="stTabs"] button[aria-selected="true"] {
+    color: #f0c040 !important;
+    border-bottom: 2px solid #f0c040 !important;
+}
+
+/* ── PROGRESS BAR ─────────────────────────── */
+[data-testid="stProgress"] > div > div > div > div {
+    background-color: #f0c040 !important;
+}
+[data-testid="stProgress"] > div > div > div {
+    background-color: #2a2a2a !important;
+}
+
+/* ── INFO / WARNING / ERROR boxes ────────── */
+[data-testid="stAlert"] {
+    background: #181818 !important;
+    border-left-width: 3px !important;
+    border-radius: 2px !important;
+}
+
+/* ── PLOTLY CHARTS (background) ───────────── */
+.js-plotly-plot, .plot-container {
+    background: transparent !important;
+}
+
+/* ── SCROLLBAR ────────────────────────────── */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: #111; }
+::-webkit-scrollbar-thumb { background: #333; border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: #f0c040; }
