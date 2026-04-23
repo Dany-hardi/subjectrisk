@@ -4,8 +4,6 @@ A Python/Streamlit application that collects student behavioural and academic
 data for a specific subject and computes a statistically justified risk of
 failing the upcoming exam — with every metric explained in plain language.
 
-## Bloomberg Terminal aesthetic · Black & Gold · Courier New
-
 ---
 
 ## Quick Start
