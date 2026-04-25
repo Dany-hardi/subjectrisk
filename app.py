@@ -110,6 +110,147 @@ if "result" not in st.session_state:
     st.session_state.result = None
 if "show_results" not in st.session_state:
     st.session_state.show_results = False
+if "page" not in st.session_state:
+    st.session_state.page = "landing"   # "landing" | "form" | "results" 
+
+
+
+# ─────────────────────────────────────────────────────────────
+# LANDING PAGE
+# ─────────────────────────────────────────────────────────────
+
+def render_landing():
+    # ── Hero block ────────────────────────────────────────────
+    st.markdown("""
+<div style="text-align:center;padding:40px 0 32px">
+  <div style="color:#f0c040;font-size:11px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:14px">
+    Exam Preparation Intelligence
+  </div>
+  <div style="color:#eeeeee;font-size:32px;font-weight:700;letter-spacing:.04em;line-height:1.3;margin-bottom:18px">
+    Do you know your real risk<br>of failing your next exam?
+  </div>
+  <div style="color:#888;font-size:14px;max-width:560px;margin:0 auto;line-height:1.9">
+    Most students feel either falsely confident or needlessly anxious before an exam —
+    because they have no objective measure of where they actually stand.
+    <strong style="color:#cccccc">SubjectRisk</strong> changes that.
+  </div>
+</div>
+""", unsafe_allow_html=True)
+
+    # ── What it does ──────────────────────────────────────────
+    section_header("WHAT THIS APP DOES", "One subject. One exam. One honest answer.")
+
+    st.markdown("""
+<div style="color:#aaaaaa;font-size:13px;line-height:1.9;margin-bottom:20px">
+You enter data about <strong style="color:#eeeeee">one specific subject</strong> you are preparing for —
+your study habits, your past scores, how much of the programme you have covered,
+your sleep and stress levels, and more.
+<br><br>
+The app runs those numbers through a <strong style="color:#eeeeee">weighted statistical model</strong>
+built on peer-reviewed research in educational psychology. It then produces a
+<strong style="color:#f0c040">risk score from 0 to 100</strong>, a pass probability, a predicted exam score,
+and a breakdown of exactly which factors are hurting you the most — each one explained
+in plain language, not statistical jargon.
+<br><br>
+The goal is simple: <strong style="color:#eeeeee">give you a clear, honest, justified picture of where you stand</strong>
+so you can make better decisions about where to focus your remaining preparation time.
+</div>
+""", unsafe_allow_html=True)
+
+    # ── 3 columns: what you get ───────────────────────────────
+    c1, c2, c3 = st.columns(3)
+    with c1:
+        st.markdown("""
+<div style="background:#181818;border:1px solid #2a2a2a;border-top:2px solid #f0c040;
+            border-radius:3px;padding:18px 16px;height:100%">
+  <div style="color:#f0c040;font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px">
+    Risk Score
+  </div>
+  <div style="color:#eeeeee;font-size:13px;line-height:1.8">
+    A single number — 0 to 100 — that summarises your current probability of failing,
+    calculated from 8 independent factors with documented weights.
+  </div>
+</div>""", unsafe_allow_html=True)
+
+    with c2:
+        st.markdown("""
+<div style="background:#181818;border:1px solid #2a2a2a;border-top:2px solid #f0c040;
+            border-radius:3px;padding:18px 16px;height:100%">
+  <div style="color:#f0c040;font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px">
+    Factor Breakdown
+  </div>
+  <div style="color:#eeeeee;font-size:13px;line-height:1.8">
+    Every dimension — study volume, coverage, sleep, past scores, attendance — is
+    scored individually and explained with its specific contribution to your risk.
+  </div>
+</div>""", unsafe_allow_html=True)
+
+    with c3:
+        st.markdown("""
+<div style="background:#181818;border:1px solid #2a2a2a;border-top:2px solid #f0c040;
+            border-radius:3px;padding:18px 16px;height:100%">
+  <div style="color:#f0c040;font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px">
+    Action Plan
+  </div>
+  <div style="color:#eeeeee;font-size:13px;line-height:1.8">
+    Three prioritised actions derived directly from your weakest factors —
+    not generic advice, but specific steps calculated from your own data.
+  </div>
+</div>""", unsafe_allow_html=True)
+
+    st.markdown("<br>", unsafe_allow_html=True)
+
+    # ── How it works ──────────────────────────────────────────
+    section_header("HOW IT WORKS", "No fake data. No generic scores. Everything computed from what you enter.")
+
+    st.markdown("""
+<div style="color:#aaaaaa;font-size:13px;line-height:1.9;margin-bottom:6px">
+<strong style="color:#eeeeee">Step 1 — You fill in the form.</strong>
+About 20 questions covering your study behaviour, academic record, physical state,
+and use of resources — all specific to the subject and exam you are targeting.
+It takes roughly 3 minutes.
+<br><br>
+<strong style="color:#eeeeee">Step 2 — The model computes 8 risk factors.</strong>
+Each factor is calculated using a documented formula (not an opinion), normalised to a
+0–100 scale, and weighted by its empirically established importance. The weights come
+from meta-analyses in educational psychology — Credé & Kuncel (2008), Karpicke & Roediger (2008),
+Walker (2017), and others.
+<br><br>
+<strong style="color:#eeeeee">Step 3 — You get a full report.</strong>
+A risk gauge, a pass probability, a predicted score, charts, and a factor-by-factor
+explanation — all generated from your data, recalculated every time you submit.
+</div>
+""", unsafe_allow_html=True)
+
+    # ── Important note ────────────────────────────────────────
+    st.markdown("""
+<div style="background:#0f1a10;border:1px solid #1a3020;border-left:3px solid #3db87a;
+            border-radius:0 3px 3px 0;padding:12px 16px;margin:10px 0 28px">
+  <span style="color:#3db87a;font-size:10px;letter-spacing:.1em;text-transform:uppercase;
+               font-weight:700">Important</span><br>
+  <span style="color:#aaaaaa;font-size:12px;line-height:1.8">
+    This tool produces <strong style="color:#cccccc">statistical estimates</strong>, not guarantees.
+    Its accuracy depends entirely on the honesty and accuracy of what you enter.
+    A student who inflates their scores or underestimates their stress will get a misleadingly
+    optimistic result. Enter your real data to get a useful result.
+  </span>
+</div>
+""", unsafe_allow_html=True)
+
+    # ── CTA button ────────────────────────────────────────────
+    col_l, col_c, col_r = st.columns([1.5, 1, 1.5])
+    with col_c:
+        if st.button("▶  START MY ANALYSIS", use_container_width=True):
+            st.session_state.page = "form"
+            st.rerun()
+
+    # ── Footer note ───────────────────────────────────────────
+    st.markdown("""
+<div style="text-align:center;margin-top:40px;color:#333;font-size:10px">
+  SubjectRisk · Built with Python, Streamlit, and Plotly ·
+  Model based on peer-reviewed research in educational psychology
+</div>
+""", unsafe_allow_html=True)
 
 
 # ─────────────────────────────────────────────────────────────
@@ -117,6 +258,11 @@ if "show_results" not in st.session_state:
 # ─────────────────────────────────────────────────────────────
 
 def render_form():
+    # Back to landing
+    if st.button("← BACK"):
+        st.session_state.page = "landing"
+        st.rerun()
+
     st.markdown(
         '<p style="color:#666;font-size:12px;margin-bottom:24px">'
         'Answer every question as honestly as possible. The more accurate your inputs, '
@@ -378,6 +524,7 @@ def render_form():
 
             st.session_state.result = result
             st.session_state.show_results = True
+            st.session_state.page = "results"
             st.rerun()
 
 
@@ -392,6 +539,7 @@ def render_results(result: RiskResult):
     with col_back:
         if st.button("← BACK TO FORM"):
             st.session_state.show_results = False
+            st.session_state.page = "form"
             st.rerun()
     with col_title:
         st.markdown(
@@ -659,6 +807,11 @@ Blended with trend extrapolation (40% weight) when past scores are available.
 # ─────────────────────────────────────────────────────────────
 
 if st.session_state.show_results and st.session_state.result:
+    st.session_state.page = "results"
+
+if st.session_state.page == "results" and st.session_state.result:
     render_results(st.session_state.result)
-else:
+elif st.session_state.page == "form":
     render_form()
+else:
+    render_landing()
