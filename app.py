@@ -176,7 +176,7 @@ so you can make better decisions about where to focus your remaining preparation
         st.markdown("""
 <div style="background:#181818;border:1px solid #2a2a2a;border-top:2px solid #f0c040;
             border-radius:3px;padding:18px 16px;height:100%">
-  <div style="color:#f0c040;font-size:11px;letter-spacing:12em;text-transform:uppercase;margin-bottom:10px">
+  <div style="color:#f0c040;font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px">
     Factor Breakdown
   </div>
   <div style="color:#eeeeee;font-size:13px;line-height:1.8">
