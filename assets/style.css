@@ -104,17 +104,23 @@ input[type="number"] {
 }
 
 /* ── BUTTONS ──────────────────────────────── */
-.stButton > button *{
+/* Styles the button itself */
+.stButton > button {
     background-color: #ffffff !important;
-    color: #000000 !important;
     border: none !important;
+    border-radius: 2px !important;
+    padding: 0.6rem 1.8rem !important;
+    transition: background 0.15s !important;
+}
+
+/* Forces the inner text to be black with your terminal font */
+.stButton > button p {
+    color: #000000 !important;
     font-family: 'Courier New', monospace !important;
     font-weight: 700 !important;
     font-size: 0.85rem !important;
     letter-spacing: 0.1em !important;
-    border-radius: 2px !important;
-    padding: 0.6rem 1.8rem !important;
-    transition: background 0.15s !important;
+    margin: 0 !important; /* Removes any default Streamlit paragraph margins */
 }
 .stButton > button:hover {
     background-color: #c89a28 !important;
@@ -126,7 +132,24 @@ input[type="number"] {
     font-size: 0.85rem !important;
 }
 
-/* ── DIVIDERS ─────────────────────────────── */
+/* ── DIVIDERS ─────────────────────────────── *//* Styles the button itself */
+.stButton > button {
+    background-color: #ffffff !important;
+    border: none !important;
+    border-radius: 2px !important;
+    padding: 0.6rem 1.8rem !important;
+    transition: background 0.15s !important;
+}
+
+/* Forces the inner text to be black with your terminal font */
+.stButton > button p {
+    color: #000000 !important;
+    font-family: 'Courier New', monospace !important;
+    font-weight: 700 !important;
+    font-size: 0.85rem !important;
+    letter-spacing: 0.1em !important;
+    margin: 0 !important; /* Removes any default Streamlit paragraph margins */
+}
 hr {
     border-color: #222 !important;
 }
