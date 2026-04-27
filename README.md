@@ -4,6 +4,8 @@ A Python/Streamlit application that collects student behavioural and academic
 data for a specific subject and computes a statistically justified risk of
 failing the upcoming exam — with every metric explained in plain language.
 
+## Bloomberg Terminal aesthetic · Black & Gold · Courier New
+
 ---
 
 ## Quick Start
@@ -27,7 +29,7 @@ Then open http://localhost:8501 in your browser.
    from educational psychology research. Each factor is normalised to 0–100
    and weighted by its empirical importance.
 
-3. **Results Display** — Bloomberg Terminal-style dashboard showing:
+3. **Results Display** — Terminal dashboard showing:
    - Overall risk score (0–100) with animated gauge
    - Pass probability (logistic formula, 0–100%)
    - Predicted exam score (weighted regression model)

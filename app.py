@@ -176,7 +176,25 @@ so you can make better decisions about where to focus your remaining preparation
         st.markdown("""
 <div style="background:#181818;border:1px solid #2a2a2a;border-top:2px solid #f0c040;
             border-radius:3px;padding:18px 16px;height:100%">
-  <div style="color:#f0c040;font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px">
+  <div style="color:#f0c040;font-size:11px;letter-spacingglad you produced these md files. 
+
+now let's dive in the process of creation of the website. 
+
+let's code phase 1 of the project; the complete full backend service, with the databse and the auth. remmebr the backend has to be powerful, built using the best engineering practices, actionnable and everything described in a well documented README. 
+
+N>B: on developping and building the backend, you will not hand to me the backend file at the end of its build. you will instead hold it, and we will move to the next step of the build. before moving on to the next build on the timeline, you will perform QA tests to make sure the generated codebase works perfectly, is secured and cannot be tampered with.
+
+At the end of the build and after exhaustion of the timeline, you will then make sure you package all the files that need to be in the projects folder, you package them all in a zip file then you hand them to me with a readme for execution and maintenance.
+
+all should be done in full repsect and complaince of modern engineering practices, clean, modular and maintenable code with well defined methods etc....
+
+
+
+also, note that the final deliverable will be the full MIST website, both frontend(higly professional, and ultra high font and very elegant, refelceting the prestige of our insititution, using white, black and red colors for the website.) and backends with the full database file with all business logic implemented and all conmstraints clearly defined. the key being obviously, atention being paid to the admin pages of the main website and the portal admin exec page all in the exec page. (we will build the official portal later on.). also note that you should build secure authentication methods and well defined logic across the website.
+
+
+
+i think you have the full mind map of the nextsteps.:.12em;text-transform:uppercase;margin-bottom:10px">
     Factor Breakdown
   </div>
   <div style="color:#eeeeee;font-size:13px;line-height:1.8">
