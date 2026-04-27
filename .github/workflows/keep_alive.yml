@@ -1,0 +1,28 @@
+name: Keep Streamlit App Awake
+
+on:
+  schedule:
+    # This runs the bot every 8 hours
+    - cron: '0 */8 * * *' 
+  workflow_dispatch: # Adds a button to let you trigger it manually on GitHub
+
+jobs:
+  wake-app:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+
+    - name: Install Selenium
+      run: |
+        python -m pip install --upgrade pip
+        pip install selenium
+
+    - name: Run wake up bot
+      run: python wake_up.py
