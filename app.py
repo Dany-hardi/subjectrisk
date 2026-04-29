@@ -96,7 +96,7 @@ st.markdown("""
     <span style="color:#444;font-size:11px;margin-left:14px">/ EXAM FAILURE PREDICTION ENGINE</span>
   </div>
   <div style="color:#444;font-size:10px;letter-spacing:.08em">
-    REGRESSION · LOGISTIC · WEIGHTED COMPOSITE · v1.0
+    REGRESSION MODEL COMPUITNG RISK SCORES BASED ON 8 DEFINED FACTORS
   </div>
 </div>
 """, unsafe_allow_html=True)
