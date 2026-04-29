@@ -96,7 +96,7 @@ st.markdown("""
     <span style="color:#444;font-size:11px;margin-left:14px">/ EXAM FAILURE PREDICTION ENGINE</span>
   </div>
   <div style="color:#444;font-size:10px;letter-spacing:.08em">
-    REGRESSION MODEL COMPUITNG RISK SCORES BASED ON 8 DEFINED FACTORS
+    <strong>REGRESSION MODEL COMPUITNG RISK SCORES BASED ON 8 DEFINED FACTORS</strong>
   </div>
 </div>
 """, unsafe_allow_html=True)
