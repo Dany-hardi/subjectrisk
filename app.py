@@ -128,6 +128,7 @@ def render_landing():
   </div>
   <div style="color:#eeeeee;font-size:32px;font-weight:700;letter-spacing:.04em;line-height:1.3;margin-bottom:18px">
     Do you know your real risk<br>of failing your next exam?
+    <br>Answer this form and get to know<br>whether you're ready or not.!
   </div>
   <div style="color:#888;font-size:14px;max-width:560px;margin:0 auto;line-height:1.9">
     Most students feel either falsely confident or needlessly anxious before an exam —
